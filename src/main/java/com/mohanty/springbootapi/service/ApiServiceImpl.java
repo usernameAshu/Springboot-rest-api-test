@@ -49,6 +49,7 @@ public class ApiServiceImpl implements ApiService {
     public ResponseDtoUserAccounts getOldestUserAccounts() {
 
         String url ="https://api.github.com/search/users";
+        String backupUrl = "https://api.github.com/search/repositories?q=followers:0&sort=joined&order=asc";
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Accept","application/vnd.github.preview");
